@@ -22,6 +22,48 @@ body::before{
     
 }
 
+body{
+   
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span:nth-child(even){
+    background:#f9f871;
+    box-shadow: 0 0 0 10px#f9f87144,
+    0 0 50px #f9f871,
+    0 0 100px #f9f871;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color:#ff9671;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px#ff967144,
+    0 0 50px #ff9671,
+    0 0 100px #ff9671;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(600s / var(--i));
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform:  translateY(-10vh) scale(1);
+    }
+}
+
+
 @keyframes bg-animation{
     0% {
         background-position: left;
