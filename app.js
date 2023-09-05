@@ -14,6 +14,12 @@ githubLogo.addEventListener('click', function(){
     window.location.href = url;
 })
 
+linkedInLogo.addEventListener('click', function(){
+    const url = 'https://www.linkedin.com/in/alejandro-sacripanti-7abaa823a/'
+
+    window.location.href = url;
+})
+
 
 
 function fadeInItemsOnScroll() {
