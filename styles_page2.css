@@ -229,3 +229,18 @@ h3{
         transform: rotate(360deg);
     }
 }
+
+.slide-in-image {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    height: 300px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+/* styles.css */
+.slide-in-image.active {
+    transform: translateX(0);
+    opacity: 1;
+}

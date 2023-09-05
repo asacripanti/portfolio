@@ -81,3 +81,42 @@ box.addEventListener('mouseout', () => {
 // }
 
 // githubWindow.addEventListener('scroll', logoSlide);
+
+// script.js
+const slideInImages = document.querySelectorAll(".slide-in-image");
+
+function debounce(func, wait = 20, immediate = true) {
+    let timeout;
+    return function () {
+        const context = this;
+        const args = arguments;
+        const later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+function checkSlide() {
+    slideInImages.forEach((image) => {
+        // Get the bottom of the image
+        const imageBottom = image.getBoundingClientRect().bottom;
+        // Check if the image is in the viewport
+        const isImageVisible = imageBottom <= window.innerHeight;
+        
+        if (isImageVisible) {
+            image.classList.add("active");
+        } else {
+            image.classList.remove("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", debounce(checkSlide));
+
+// Initial check when the page loads
+window.addEventListener("DOMContentLoaded", checkSlide);
