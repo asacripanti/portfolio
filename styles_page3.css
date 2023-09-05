@@ -1,0 +1,22 @@
+#thirdPage{
+    width: 100%;
+    height: 1000px;
+    background-color: aqua;
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.projectHeader{
+    background-color: red;
+    height: 30%;
+    width: 80%;
+}
+
+.projectContent{
+    background-color: blue;
+    height: 60%;
+    width: 80%;
+}

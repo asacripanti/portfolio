@@ -6,12 +6,15 @@
     height: 50%;
     background-image: linear-gradient(
         45deg,
+        #645DC2,
+        #6E52CB,
         #845ec2,
         #d65db1,
         #ff6f91,
-        #ff9671,
-        #ffc75f,
-        #f9f871
+        #FF7073
+        /* #ff9671, */
+        /* #ffc75f, */
+        /* #f9f871 */
     );
     background-size: 400%;
     background-repeat: no-repeat;
@@ -54,7 +57,7 @@
 
 
 
-@keyframes animate-bubbles {
+/* @keyframes animate-bubbles {
     0%
     {
         transform: translateY(0vh) scale(0);
@@ -78,6 +81,64 @@
     {
         transform:  translateY(-600px) scale(.4);
         opacity: 0;
+    }
+} */
+
+@media(min-height:900px){
+    @keyframes animate-bubbles {
+        0%
+        {
+            transform: translateY(0vh) scale(0);
+        }
+        80%
+        {
+            
+        }
+        90%
+        {
+           
+        }
+        95%
+        {
+            background-color: white;
+            box-shadow: 0 0 0 10px white,0 0 50px white,
+            0 0 100px white;
+            opacity: .7; 
+        }
+        100%
+        {
+            transform:  translateY(-600px) scale(.4);
+            opacity: 0;
+        }
+    }
+}
+
+@media(min-height:600px) and (max-height: 899px){
+    @keyframes animate-bubbles {
+        0%
+        {
+            transform: translateY(0vh) scale(0);
+        }
+        80%
+        {
+            
+        }
+        90%
+        {
+           
+        }
+        95%
+        {
+            background-color: blue;
+            box-shadow: 0 0 0 10px white,0 0 50px white,
+            0 0 100px white;
+            opacity: .7; 
+        }
+        100%
+        {
+            transform:  translateY(-400px) scale(.4);
+            opacity: 0;
+        }
     }
 }
 
@@ -113,6 +174,8 @@
 
 .navbar{
     z-index: 1;
+    /* position: sticky;
+    top: 0px; */
 }
 
 .navbar-nav{
@@ -135,6 +198,17 @@
     height: 500px;
 }
 
+.colOneBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colOneBodyText{
+    font-size: 24px;
+    
+}
+
 .colOneHeader{
     padding-top: 100px;
 }
@@ -153,8 +227,45 @@
 .colOneButtonContainer > button{
     width: 112px;
     height: 33px;
-    border-radius: 20px;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    transition: all 0.5s ease;
 }
+
+button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 3px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  button > a{
+    text-decoration: none;
+    color: white;
+  }
+ 
+  .projectsA{
+    color: black;
+  }
 
 .colOneButtonContainer > button:nth-child(odd){
     background-color: black;
@@ -166,25 +277,6 @@
     background-color: white;
 }
 
-
-button:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;  
-  top: 14px;
-  right: -20px;
-  transition: 0.5s;
-}
-
-button:hover{
-  padding-right: 24px;
-  padding-left:8px;
-}
-
-button:hover:after {
-  opacity: 1;
-  right: 10px;
-}
 
 .techStack > div{
     width: 100%;
