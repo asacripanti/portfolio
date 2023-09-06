@@ -17,10 +17,14 @@ githubLogo.addEventListener('click', function(){
 linkedInLogo.addEventListener('click', function(){
     const url = 'https://www.linkedin.com/in/alejandro-sacripanti-7abaa823a/'
 
-    window.location.href = url;
+    window.open(url);
+    // window.location.href = url;
 })
 
-
+// navigate to about page
+document.getElementById("navigateToAbout").addEventListener("click", function() {
+    document.getElementById("secondPage").scrollIntoView({ behavior: "smooth" });
+  });
 
 function fadeInItemsOnScroll() {
     const middleOfViewport = window.innerHeight / 2 + window.scrollY;
