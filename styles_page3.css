@@ -2,22 +2,81 @@
     width: 100%;
     height: 1000px;
     background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .projectContainer{
+    width: 1080px;
+    height: 90%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .projectHeader{
     background-color: red;
     height: 30%;
     width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .projectContent{
     background-color: blue;
     height: 60%;
     width: 80%;
+    display: flex;
 }
 
+.projectInfo, .projectList{
+    height: 100%;
+    width: 50%;
+}
+
+.projectInfo{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.gifContainer{
+    width: 80%;
+    height: 40%;
+    background-color: pink;
+}
+
+.gifOne{
+    height: 100%;
+    width: 100%;
+}
+
+.projectDescription{
+    width: 90%;
+    height: 50%;
+    background-color: blueviolet;
+}
+
+.projectList{
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+}
+
+.projectColumn{
+    height: 100%;
+    width: 40%;
+}
+
+.project1{
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+}
