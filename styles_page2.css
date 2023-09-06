@@ -113,8 +113,8 @@ h3{
 .item-7{
     grid-row: 20/21;
     grid-column: 1/7;
-    /* display: flex;
-    justify-content: space-around; */
+    display: flex;
+    justify-content: space-around;
 }
 
 .item-8{
