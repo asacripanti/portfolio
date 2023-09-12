@@ -3,9 +3,13 @@ const bioText = document.querySelector('.bioText');
 const bioItems = bioText.querySelectorAll('div');
 const box = document.querySelector('#box');
 const secondPage = document.querySelector('#secondPage');
+const thirdPage = document.querySelector('#thirdPage');
 const githubWindow = document.querySelector('.item-6');
 const linkedInLogo = document.querySelector('.linkedinImg');
 const githubLogo = document.querySelector('.githubImg');
+const gifContainer = document.querySelector('.gifContainer');
+const gifOne = document.querySelector('.gifOne');
+const projectDesc = document.querySelector('.projectDescription');
 
 
 githubLogo.addEventListener('click', function(){
@@ -23,8 +27,13 @@ linkedInLogo.addEventListener('click', function(){
 
 // navigate to about page
 document.getElementById("navigateToAbout").addEventListener("click", function() {
-    document.getElementById("secondPage").scrollIntoView({ behavior: "smooth" });
+    secondPage.scrollIntoView({ behavior: "smooth" });
   });
+
+// navigate to project page 
+document.getElementById('navigateToProjects').addEventListener('click', function(){
+    thirdPage.scrollIntoView({behavior: 'smooth'});
+}) 
 
 function fadeInItemsOnScroll() {
     const middleOfViewport = window.innerHeight / 2 + window.scrollY;
@@ -44,6 +53,8 @@ window.addEventListener('scroll', fadeInItemsOnScroll);
 window.addEventListener('resize', fadeInItemsOnScroll);
 fadeInItemsOnScroll(); // Call the function initially to handle elements in the initial view
 
+
+//fade in and out for biotext and pic divider
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
 
@@ -64,37 +75,6 @@ box.addEventListener('mouseout', () => {
 });
 
 
-// flowElements.forEach(flow => {
-//     flow.addEventListener('mouseenter', () => {
-//         flow.classList.add('transition-active');
-//     });
-
-//     flow.addEventListener('mouseleave', () => {
-//         setTimeout(() => {
-//             flow.classList.remove('transition-active');
-//         }, 1000); // Adjust the delay as needed
-//     });
-// });
-
-
-
-// function logoSlide(){
-//     const middleOfViewport = window.innerHeight / 2 + window.scrollY;
-//     const itemMiddle = item.offsetTop + item.offsetHeight / 2;
-
-//     if(itemMiddle < middleOfViewport){
-//         linkedInLogo.style.transform = 'translate(120px';
-//     }
-//     else{
-//         linkedInLogo.style.transform = 'none';
-//     }
-// }
-
-// githubWindow.addEventListener('scroll', logoSlide);
-
-// script.js
-const slideInImages = document.querySelectorAll(".slide-in-image");
-
 function debounce(func, wait = 20, immediate = true) {
     let timeout;
     return function () {
@@ -112,18 +92,28 @@ function debounce(func, wait = 20, immediate = true) {
 }
 
 function checkSlide() {
-    slideInImages.forEach((image) => {
+   
         // Get the bottom of the image
-        const imageBottom = image.getBoundingClientRect().bottom;
+        const imageTop = gifOne.getBoundingClientRect().top;
+        // const descTop = projectDesc.getBoundingClientRect().top;
         // Check if the image is in the viewport
-        const isImageVisible = imageBottom <= window.innerHeight;
+        const isImageVisible = imageTop <= window.innerHeight;
+        // const isDescVisible = descTop <= window.innerHeight;
         
         if (isImageVisible) {
-            image.classList.add("active");
+            gifOne.classList.add("active");
+            projectDesc.classList.add("active");
+            console.log('added');
         } else {
-            image.classList.remove("active");
+            // gifOne.classList.remove("active");
         }
-    });
+
+        // if (isDescVisible) {
+        //     projectDesc.classList.add("active");
+        //     console.log('added');
+        // } else {
+        //     projectDesc.classList.remove("active");
+        // }
 }
 
 window.addEventListener("scroll", debounce(checkSlide));

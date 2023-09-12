@@ -1,7 +1,7 @@
 #thirdPage{
     width: 100%;
     height: 1000px;
-    background-color: aqua;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .projectHeader{
-    background-color: red;
+    /* background-color: red; */
     height: 30%;
     width: 80%;
     display: flex;
@@ -27,9 +27,9 @@
 }
 
 .projectContent{
-    background-color: blue;
+    /* background-color: blue; */
     height: 60%;
-    width: 80%;
+    width: 100%;
     display: flex;
 }
 
@@ -39,44 +39,122 @@
 }
 
 .projectInfo{
-    background-color: green;
+    /* background-color: green; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 
 }
 
 .gifContainer{
-    width: 80%;
-    height: 40%;
-    background-color: pink;
+    width: 90%;
+    height: 50%;
+    margin-bottom: 50px;
+    
+    /* background-color: pink; */
 }
 
-.gifOne{
-    height: 100%;
+
+.gifOne {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    height: 400px;
     width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%; 
+    max-height: 100%;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7); 
+}
+
+.gifTwo{
+    opacity: 0; 
+    width: 486px;
+    height: 270px;
+    max-width: 100%;
+    max-width: 100%;
+    position: absolute;
+    left: 323px;
+    /* inset: 0; */
+}
+
+/* styles.css */
+.gifOne.active {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .projectDescription{
+    /* transform: translateX(-100%); */
+    opacity: 0;
+    transition: opacity 5s;
     width: 90%;
     height: 50%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+}
+
+.projectDescription.active{
+    opacity: 1;
 }
 
 .projectList{
     display: flex;
     justify-content: center;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .projectColumn{
     height: 100%;
-    width: 40%;
+    width: 80%;
+}
+
+.project1, .project2{
+    border-radius: 1.2rem;
+    position: relative;
+    width: calc(50% + 100px);
+    height: calc(20% + 100px);
+    /* border: 1px solid black; */
+    background-color: transparent;
 }
 
 .project1{
+    margin-bottom: 50px;
+}
+
+.project2{
+
+}
+
+.glow-container{
+    position: absolute;
+    /* inset moves svg on top of button */
+    inset: 0;
+    outline: 3px solid blue;
     width: 100%;
-    height: 20%;
-    border: 1px solid black;
+    height: 100%;
+}
+
+.glow-blur,
+.glow-line{
+    width: 100%;
+    height: 100%;
+    /* border radius for moving borders */
+    /* rx:1.2rem; */
+    fill: pink;
+    stroke: black;
+    stroke-width: 5px;
+    /* dash gap around button */
+    stroke-dasharray: 20px 30px;
+    transition: stroke-dashoffset 500ms;
+}
+
+.project1:hover .glow-blur,
+.project1:hover .glow-line{
+    stroke-dashoffset: 10px;
+}
+
+.glow-blur{
+    filter: blur(5px);
+    stroke: red;
 }

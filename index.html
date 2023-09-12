@@ -41,8 +41,8 @@
                         </span>
                     </section>
                     <section class="colOneButtonContainer">
-                        <button id="navigateToAbout">About</button>
-                        <button><a class="projectsA" href="#thirdPage">Projects</a></button>
+                        <button class="main_button" id="navigateToAbout">About</button>
+                        <button class="main_button" id="navigateToProjects">Projects</button>
                     </section>
                 </div>
                 <div class="col-md-6 col-two">
@@ -138,7 +138,15 @@
              </div>
             </div>
            <div class="item-8"><h2>Get in touch</h2></div>
-           <div class="item-9"><img src="images/mailLogo.png" alt="mail logo" class="mailLogo"></div>
+           <div class="item-9">
+            <form action="" class="contact_form">
+                <input type="text" class="contact_form-name" placeholder="Name">
+                <input type="email" class="contact_form-email" placeholder="Email">
+                <textarea class="contact_form-message" placeholder="Message" name="message" id="" cols="30" rows="10"></textarea>
+                <button class="contact_form-button main_button" >Submit</button>
+
+            </form>
+            </div>
 
         </section>
         <section class="imgContainer">
@@ -154,15 +162,6 @@
     </div>
 </div>
 <div id="thirdPage">
-  <!-- <div class="container">
-    <h1>Scroll down to see the image slide in</h1>
-    <div>
-      <img class="slide-in-image" src="images/bootstrap_logo.jpeg" alt="Slide-In Image">
-    </div>
-    <div>
-      <img class="slide-in-image" src="images/bootstrap_logo.jpeg" alt="Slide-In Image">
-    </div>
-  </div> -->
     <div class="projectContainer">
         <section class="projectHeader">
             <h2 id="thirdPageTitle">Projects</h2>
@@ -170,17 +169,30 @@
         <section class="projectContent">
             <section class="projectInfo">
                 <div class="gifContainer">
-                    <video class="gifOne" src="images/deckbuilderGif.mov"></video>
+                    <img src="images/deckbuilderImg.png" alt="project 1 img" class="gifOne">
+                    <img src="images/tempPic.jpeg" alt="fluffy cat" class="gifTwo">
                 </div>
                 <div class="projectDescription">
+                    <h3 class="descHeader">Edit your own MTG deck</h3>
                     <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio perspiciatis nobis odit vero. Fugit voluptas earum ipsam. Nostrum minus earum magni provident, veniam pariatur, commodi, expedita hic obcaecati ad perspiciatis?</span>
                 </div>
             </section>
             <section class="projectList">
                <div class="projectColumn">
-                    <div class="project1">
-
-                    </div>
+                    <button class="project1">
+                        Deck Builder
+                        <svg class="glow-container">
+                            <rect pathLength="100" class="glow-blur"></rect>
+                            <rect pathLength="100" class="glow-line"></rect>
+                        </svg>
+                    </button>
+                    <button class="project2">
+                        Project 2
+                        <svg class="glow-container">
+                            <rect pathLength="100" class="glow-blur"></rect>
+                            <rect pathLength="100" class="glow-line"></rect>
+                        </svg>
+                    </button>
                </div>
             </section>
         </section>
