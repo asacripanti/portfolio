@@ -107,54 +107,83 @@
 .projectColumn{
     height: 100%;
     width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project1, .project2{
     border-radius: 1.2rem;
     position: relative;
-    width: calc(50% + 100px);
-    height: calc(20% + 100px);
+    width: 140px;
+    height: 50px;
     /* border: 1px solid black; */
     background-color: transparent;
+    --container-offset: 100px;
+    --glow-line-color: #fff;
+    --glow-line-thickness: 2px;
+    --glow-blur-color: red;
+    --glow-blur-size: 3px;
+    animation: dashOffsetAnimation 10s linear infinite;
 }
 
+/* buttons */
 .project1{
-    margin-bottom: 50px;
+    margin-bottom: 200px;
+    position: relative;
+    /* animation: dashOffsetAnimation 7s linear infinite; */
+    /* animation: glow-visibility 5000ms; */
 }
 
-.project2{
-
-}
-
+/* svg */
 .glow-container{
     position: absolute;
+    pointer-events: none;
     /* inset moves svg on top of button */
-    inset: 0;
-    outline: 3px solid blue;
-    width: 100%;
-    height: 100%;
+    inset: calc(var(--container-offset) / -2);
+    /* outline: 3px solid blue; */
+    width: calc(100% + var(--container-offset));
+    height: calc(100% + var(--container-offset));
+    opacity: 0;
+    animation: glow-visibility 5s linear infinite;
+    
 }
 
-.glow-blur,
-.glow-line{
-    width: 100%;
-    height: 100%;
+/* rects */
+.glow-blur,.glow-line{
+    width: calc(100% - var(--container-offset));;
+    height: calc(100% - var(--container-offset));;
+    x: calc(var(--container-offset) / 2);
+    y: calc(var(--container-offset) / 2);
     /* border radius for moving borders */
-    /* rx:1.2rem; */
-    fill: pink;
+    rx:1.2rem;
+    fill: transparent;
     stroke: black;
     stroke-width: 5px;
     /* dash gap around button */
     stroke-dasharray: 20px 30px;
-    transition: stroke-dashoffset 500ms;
+    transition: stroke-dashoffset 157000ms;
 }
 
-.project1:hover .glow-blur,
-.project1:hover .glow-line{
-    stroke-dashoffset: 10px;
-}
 
 .glow-blur{
-    filter: blur(5px);
-    stroke: red;
+    filter: blur(var(--glow-blur-size));
+    stroke: var(--glow-blur-color);
+    stroke-width: var(--glow-blur-size);
+
+}
+
+.glow-line{
+    stroke: var(--glow-line-color);
+    stroke-width: var(--glow-line-thickness);
+}
+
+@keyframes glow-visibility{
+    0%, 100% { opacity: 0 }
+    25%, 75% { opacity: 1 }
+
+}
+
+@keyframes dashOffsetAnimation {
+    0% { stroke-dashoffset:  50000px; }
+    100% { stroke-dashoffset: 0 }
 }

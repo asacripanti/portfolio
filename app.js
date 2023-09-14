@@ -10,6 +10,12 @@ const githubLogo = document.querySelector('.githubImg');
 const gifContainer = document.querySelector('.gifContainer');
 const gifOne = document.querySelector('.gifOne');
 const projectDesc = document.querySelector('.projectDescription');
+const line = document.querySelector('.line');
+const blur = document.querySelector('.blur');
+const lineTwo = document.querySelector('.lineTwo');
+const blurTwo = document.querySelector('.blurTwo');
+const project1 = document.querySelector('.project1');
+const project2 = document.querySelector('.project2');
 
 
 githubLogo.addEventListener('click', function(){
@@ -120,3 +126,21 @@ window.addEventListener("scroll", debounce(checkSlide));
 
 // Initial check when the page loads
 window.addEventListener("DOMContentLoaded", checkSlide);
+
+project1.addEventListener('click', function(){
+    blur.classList.add('glow-blur');
+    line.classList.add('glow-line');
+    blurTwo.classList.remove('glow-blur');
+    lineTwo.classList.remove('glow-line');
+})
+
+project2.addEventListener('click', function(){
+    blurTwo.classList.add('glow-blur');
+    lineTwo.classList.add('glow-line');
+    blur.classList.remove('glow-blur')
+    line.classList.remove('glow-line');
+})
+
+// function addGlows(button){
+//     button.classList.add('glow')
+// }
