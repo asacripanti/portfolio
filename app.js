@@ -9,13 +9,17 @@ const linkedInLogo = document.querySelector('.linkedinImg');
 const githubLogo = document.querySelector('.githubImg');
 const gifContainer = document.querySelector('.gifContainer');
 const gifOne = document.querySelector('.gifOne');
-const projectDesc = document.querySelector('.projectDescription');
+const gifTwo = document.querySelector('.gifTwo');
+const projectDesc = document.querySelectorAll('.projectDescription');
+const skillText = document.querySelectorAll('.skillText');
 const line = document.querySelector('.line');
 const blur = document.querySelector('.blur');
 const lineTwo = document.querySelector('.lineTwo');
 const blurTwo = document.querySelector('.blurTwo');
 const project1 = document.querySelector('.project1');
 const project2 = document.querySelector('.project2');
+const projDescContainer = document.querySelector('.projectDescriptionContainer');
+const projDescContainerTwo = document.querySelector('.projectDescriptionContainerTwo')
 
 
 githubLogo.addEventListener('click', function(){
@@ -99,27 +103,36 @@ function debounce(func, wait = 20, immediate = true) {
 
 function checkSlide() {
    
-        // Get the bottom of the image
+    
         const imageTop = gifOne.getBoundingClientRect().top;
-        // const descTop = projectDesc.getBoundingClientRect().top;
-        // Check if the image is in the viewport
-        const isImageVisible = imageTop <= window.innerHeight;
-        // const isDescVisible = descTop <= window.innerHeight;
-        
-        if (isImageVisible) {
-            gifOne.classList.add("active");
-            projectDesc.classList.add("active");
-            console.log('added');
-        } else {
-            // gifOne.classList.remove("active");
-        }
+         const isImageVisible = imageTop <= window.innerHeight;
+if(gifTwo.classList != 'active'){
+    if (isImageVisible) {
+        gifOne.classList.add("active");
 
-        // if (isDescVisible) {
-        //     projectDesc.classList.add("active");
+        skillText.forEach((span) => {
+            span.classList.add("active");
+        })
+
+        projectDesc.forEach((span) =>{
+            span.classList.add("active");
+        })
+        console.log('added');
+    } 
+}
+        // if (isImageVisible) {
+        //     gifOne.classList.add("active");
+
+        //     skillText.forEach((span) => {
+        //         span.classList.add("active");
+        //     })
+
+        //     projectDesc.forEach((span) =>{
+        //         span.classList.add("active");
+        //     })
         //     console.log('added');
-        // } else {
-        //     projectDesc.classList.remove("active");
-        // }
+        // } 
+
 }
 
 window.addEventListener("scroll", debounce(checkSlide));
@@ -132,6 +145,12 @@ project1.addEventListener('click', function(){
     line.classList.add('glow-line');
     blurTwo.classList.remove('glow-blur');
     lineTwo.classList.remove('glow-line');
+
+    gifTwo.classList.remove('active');
+    gifOne.classList.add('active');
+
+    projDescContainer.classList.add('active');
+    projDescContainerTwo.classList.remove('active');
 })
 
 project2.addEventListener('click', function(){
@@ -139,6 +158,13 @@ project2.addEventListener('click', function(){
     lineTwo.classList.add('glow-line');
     blur.classList.remove('glow-blur')
     line.classList.remove('glow-line');
+
+    gifOne.classList.remove('active')
+    gifTwo.classList.add('active');
+
+    projDescContainerTwo.classList.add('active');
+    projDescContainer.classList.remove('active');
+
 })
 
 // function addGlows(button){

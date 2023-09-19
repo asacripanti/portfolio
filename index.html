@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles_page3.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md main-nav">
+    <!-- <nav class="navbar navbar-expand-md main-nav">
         <a href="#" class="navbar-brand">Navbar</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navigation">
@@ -24,9 +24,9 @@
             <a class="nav-item nav-link" href="#">Four</a>
           </div>
       </div>
-    </nav>
+    </nav> -->
     <div id="firstPage">
-        <div class="gradientBack">
+    <div class="gradientBack">
     <section class="homePageContent">
         <div class="container">
             <div class="row">
@@ -46,7 +46,7 @@
                     </section>
                 </div>
                 <div class="col-md-6 col-two">
-                    B
+                    <!-- B -->
                 </div>
             </div>
         </div>
@@ -165,35 +165,50 @@
     <div class="projectContainer">
         <section class="projectHeader">
             <h2 id="thirdPageTitle">Projects</h2>
+        <div class="buttonContainerp3">
+            <button class="project1">
+                Deck Builder
+                <svg class="glow-container">
+                    <rect pathLength="100" class="blur glow-blur"></rect>
+                    <rect pathLength="100" class="line glow-line"></rect>
+                </svg>
+            </button>
+            <button class="project2">
+                Project 2
+                <svg class="glow-container">
+                    <rect pathLength="100" stroke-linecap="round" class="blurTwo"></rect>
+                    <rect pathLength="100" stroke-linecap="round" class="lineTwo"></rect>
+                </svg>
+            </button>
+        </div>
         </section>
         <section class="projectContent">
             <section class="projectInfo">
+                <div class="projectDescriptionContainer active">
+                    <h3 class="descHeader">Edit your own MTG deck</h3>
+                    <span class="projectDescription">Build and plan out your own Magic the gathering deck. This app was built with </span>
+                    <span class="skillText">HTML, CSS and JS.</span> 
+                    <span class="projectDescription">Look up any card from the Magic universe just by typing in the search bar, the website then uses the Magic</span>
+                    <span class="skillText">API</span>
+                    <span class="projectDescription">to retrieve the results from the database.</span>
+                    <span class="projectDescription">All decks are stored in </span>
+                    <span class="skillText">local storage</span>
+                    <span class="projectDescription">so you can come back at anytime to add or remove cards.</span>   
+                </div>
+
+                <div class="projectDescriptionContainerTwo">
+                    <h3 class="descHeader">Project Two</h3>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, cupiditate rerum. Deserunt, nihil? Amet architecto quisquam tempora pariatur 
+                        harum quam nemo iusto qui. Suscipit alias ab temporibus voluptatum, commodi ipsum!</span>
+
+
+                </div>
+            </section>
+            <section class="projectList">
                 <div class="gifContainer">
                     <img src="images/deckbuilderImg.png" alt="project 1 img" class="gifOne">
                     <img src="images/tempPic.jpeg" alt="fluffy cat" class="gifTwo">
                 </div>
-                <div class="projectDescription">
-                    <h3 class="descHeader">Edit your own MTG deck</h3>
-                    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio perspiciatis nobis odit vero. Fugit voluptas earum ipsam. Nostrum minus earum magni provident, veniam pariatur, commodi, expedita hic obcaecati ad perspiciatis?</span>
-                </div>
-            </section>
-            <section class="projectList">
-               <div class="projectColumn">
-                    <button class="project1">
-                        Deck Builder
-                        <svg class="glow-container">
-                            <rect pathLength="100" class="blur glow-blur"></rect>
-                            <rect pathLength="100" class="line glow-line"></rect>
-                        </svg>
-                    </button>
-                    <button class="project2">
-                        Project 2
-                        <svg class="glow-container">
-                            <rect pathLength="100" stroke-linecap="round" class="blurTwo"></rect>
-                            <rect pathLength="100" stroke-linecap="round" class="lineTwo"></rect>
-                        </svg>
-                    </button>
-               </div>
             </section>
         </section>
     </div>

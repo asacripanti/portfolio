@@ -1,6 +1,6 @@
 #thirdPage{
     width: 100%;
-    height: 1000px;
+    height: 900px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -19,11 +19,20 @@
 
 .projectHeader{
     /* background-color: red; */
-    height: 30%;
-    width: 80%;
+    height: 5%;
+    width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
+}
+
+#thirdPageTitle{
+    margin-bottom: 50px;
+}
+
+.buttonContainerp3{
+
 }
 
 .projectContent{
@@ -31,11 +40,12 @@
     height: 60%;
     width: 100%;
     display: flex;
+    
 }
 
 .projectInfo, .projectList{
     height: 100%;
-    width: 50%;
+
 }
 
 .projectInfo{
@@ -44,12 +54,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    width: 25%;
+    
 
 }
 
+.projectList{
+    width: 75%;
+}
+
 .gifContainer{
-    width: 90%;
-    height: 50%;
+    width: 810px;
+    height: 440px;
     margin-bottom: 50px;
     
     /* background-color: pink; */
@@ -60,23 +76,13 @@
     transform: translateX(-100%);
     opacity: 0;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    height: 400px;
+    height: 100%;
     width: 100%;
     margin-bottom: 20px;
     max-width: 100%; 
     max-height: 100%;
     box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7); 
-}
-
-.gifTwo{
-    opacity: 0; 
-    width: 486px;
-    height: 270px;
-    max-width: 100%;
-    max-width: 100%;
-    position: absolute;
-    left: 323px;
-    /* inset: 0; */
+    border-radius: 8px;
 }
 
 /* styles.css */
@@ -85,16 +91,62 @@
     opacity: 1;
 }
 
+.gifTwo{
+    opacity: 0; 
+    width: 810px;
+    height: 440px;
+    position: absolute;
+    left: 510px;
+    transition: opacity 3s;
+    border-radius: 8px;
+    /* inset: 0; */
+}
+
+.gifTwo.active{
+    opacity: 1;
+}
+
+.projectDescriptionContainer{
+    width: 90%;
+    height: 50%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.projectDescriptionContainerTwo{
+    opacity: 0;
+    position: absolute;
+    width: 243px;
+    height: 243px;
+    transition: opacity 1s;
+}
+
+.projectDescriptionContainer.active{
+    opacity: 1;
+}
+
+.projectDescriptionContainerTwo.active{
+    opacity: 1;
+}
+
 .projectDescription{
     /* transform: translateX(-100%); */
     opacity: 0;
-    transition: opacity 5s;
-    width: 90%;
-    height: 50%;
+    transition: opacity 9s;
     /* background-color: blueviolet; */
 }
 
 .projectDescription.active{
+    opacity: 1;
+}
+
+.skillText{
+    color: blue;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.skillText.active{
     opacity: 1;
 }
 
@@ -114,14 +166,14 @@
 .project1, .project2{
     border-radius: 1.2rem;
     position: relative;
-    width: 140px;
-    height: 50px;
+    width: 133px;
+    height: 40px;
     /* border: 1px solid black; */
     background-color: transparent;
     --container-offset: 100px;
     --glow-line-color: #fff;
     --glow-line-thickness: 2px;
-    --glow-blur-color: red;
+    --glow-blur-color: #D16ADC;
     --glow-blur-size: 3px;
     animation: dashOffsetAnimation 10s linear infinite;
 }
@@ -186,4 +238,12 @@
 @keyframes dashOffsetAnimation {
     0% { stroke-dashoffset:  50000px; }
     100% { stroke-dashoffset: 0 }
+}
+
+
+@media(max-width: 1085px){
+    .gifContainer{
+        width: 700px;
+        height: 340px;
+    }
 }
