@@ -21,6 +21,7 @@ const project2 = document.querySelector('.project2');
 const projDescContainer = document.querySelector('.projectDescriptionContainer');
 const projDescContainerTwo = document.querySelector('.projectDescriptionContainerTwo')
 const descHeader = document.querySelector('.descHeader');
+const form = document.querySelector('.contact_form');
 
 
 githubLogo.addEventListener('click', function(){
@@ -171,6 +172,10 @@ project2.addEventListener('click', function(){
     projDescContainerTwo.classList.add('active');
     projDescContainer.classList.remove('active');
 
+})
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
 })
 
 // function addGlows(button){
