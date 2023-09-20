@@ -20,6 +20,7 @@ const project1 = document.querySelector('.project1');
 const project2 = document.querySelector('.project2');
 const projDescContainer = document.querySelector('.projectDescriptionContainer');
 const projDescContainerTwo = document.querySelector('.projectDescriptionContainerTwo')
+const descHeader = document.querySelector('.descHeader');
 
 
 githubLogo.addEventListener('click', function(){
@@ -106,32 +107,37 @@ function checkSlide() {
     
         const imageTop = gifOne.getBoundingClientRect().top;
          const isImageVisible = imageTop <= window.innerHeight;
-if(gifTwo.classList != 'active'){
-    if (isImageVisible) {
-        gifOne.classList.add("active");
+// if(gifTwo.classList != 'active'){
+//     if (isImageVisible) {
+//         gifOne.classList.add("active");
 
-        skillText.forEach((span) => {
-            span.classList.add("active");
-        })
+//         skillText.forEach((span) => {
+//             span.classList.add("active");
+//         })
 
-        projectDesc.forEach((span) =>{
-            span.classList.add("active");
-        })
-        console.log('added');
-    } 
-}
-        // if (isImageVisible) {
-        //     gifOne.classList.add("active");
+//         projectDesc.forEach((span) =>{
+//             span.classList.add("active");
+//         })
 
-        //     skillText.forEach((span) => {
-        //         span.classList.add("active");
-        //     })
+//         descHeader.classList.add('active');
+//         console.log('added');
+//     } 
+// }
+        if (isImageVisible) {
+            gifOne.classList.add("active");
 
-        //     projectDesc.forEach((span) =>{
-        //         span.classList.add("active");
-        //     })
-        //     console.log('added');
-        // } 
+            skillText.forEach((span) => {
+                span.classList.add("active");
+            })
+
+            projectDesc.forEach((span) =>{
+                span.classList.add("active");
+            })
+            console.log('added');
+
+            descHeader.classList.add('active');
+            //         console.log('added');
+        } 
 
 }
 

@@ -1,0 +1,395 @@
+
+/* PAGE 1 */
+
+
+@media (min-height: 660px) and (max-height:769px){
+    #firstPage{
+        height: 660px;
+    }
+
+    .techStack{
+     height: 280px;
+     /* margin-bottom: 320px; */
+    }
+
+    .techStack > div{
+        height: 60%;
+    }
+
+    .grid-even-columns .flow img{
+        width: 90px;
+        height: 90px;    
+    }
+
+    .bubbles{
+        /* margin-bottom: 300px; */
+    }
+ }
+
+ @media (min-height: 770px) and (max-height: 884px){
+    .bubbles{
+        margin-bottom: 150px;
+    }
+ }
+
+ @media(min-height: 885px) and (max-height:1000px){
+    .bubbles{
+        margin-bottom: 90px;
+    }
+ }
+
+ @media(max-height: 1170px){
+    #firstPage{
+        /* height: 1100px; */
+    }
+ }
+
+
+
+@media(max-width:499px){
+    .grid-even-columns{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #colOneHeaderName{
+        font-size: 55px;
+    }
+    
+    .colOneBodyText{
+        font-size: 16px;
+    }
+    
+    .techStack > div{
+        width: 40%;
+    }
+
+    .grid-even-columns .flow img{
+        width: 75px;
+        height: 75px;    
+    }
+
+    .grid-even-columns .flow:hover img{
+        transform: translate(0px);
+    }
+
+    .grid-even-columns .flow:hover .logoText {
+        color: white;
+    }
+    
+
+    .logoText{
+        font-size: 16px;
+    }
+
+    .col-one{
+        grid-template-rows: 270px 80px 70px;
+    }
+
+    .techStack{
+        height: 450px;
+    }
+
+    footer{
+        height: 20px;
+    }
+}
+
+
+@media(min-width:500px) and (max-width: 699px){
+    #colOneHeaderName{
+        font-size: 75px;
+    }
+    
+    .colOneBodyText{
+        font-size: 18px;
+    }
+
+    .techStack{
+        width: 100%;
+    }
+    
+    .techStack > div{
+        width: 100%;
+    }
+
+    .grid-even-columns .flow img{
+        width: 55px;
+        height: 55px;    
+    }
+
+    .grid-even-columns .flow:hover img{
+        transform: translate(58px);
+    }
+
+    .logoText{
+        font-size: 10px;
+    }
+}
+
+
+@media(min-width: 700px) and (max-width: 1000px){
+    .techStack > div{
+        width: 70%;
+    }
+
+    .grid-even-columns .flow img{
+        width: 80px;
+        height: 80px;    
+    }
+
+    .grid-even-columns .flow:hover img{
+        transform: translate(100px);
+    }
+
+
+}
+
+ @media(min-height:600px) and (max-height: 899px){
+    @keyframes animate-bubbles {
+        0%
+        {
+            transform: translateY(0vh) scale(0);
+        }
+        80%
+        {
+            
+        }
+        90%
+        {
+           
+        }
+        95%
+        {
+            background-color: white;
+            box-shadow: 0 0 0 10px white,0 0 50px white,
+            0 0 100px white;
+            opacity: .7; 
+        }
+        100%
+        {
+            transform:  translateY(-400px) scale(.4);
+            opacity: 0;
+        }
+    }
+}
+ 
+ @media(min-height:900px){
+    @keyframes animate-bubbles {
+        0%
+        {
+            transform: translateY(0vh) scale(0);
+        }
+        80%
+        {
+            
+        }
+        90%
+        {
+           
+        }
+        95%
+        {
+            background-color: white;
+            box-shadow: 0 0 0 10px white,0 0 50px white,
+            0 0 100px white;
+            opacity: .7; 
+        }
+        100%
+        {
+            transform:  translateY(-600px) scale(.4);
+            opacity: 0;
+        }
+    }
+}
+
+@media(max-width:1000px){
+    .bubbles > span{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(max-width: 650px){
+    .bubbles > span{
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media(max-width: 499px){
+    .bubbles {
+        display: none;
+    }
+    
+}
+
+/* PAGE 2 */
+
+@media(max-width: 1070px){
+    .contact_form-name, .contact_form-email, .contact_form-message{
+        /* width: 400px; */
+    }
+}
+
+@media(max-width:710px){
+    /* .contact_form-name, .contact_form-email, .contact_form-message{
+        width: 270px;
+    } */
+
+    .contact_form{
+        width: 270px;
+    }
+}
+
+@media(max-width: 640px){
+    .contact_form{
+        width: 235px;
+    }
+
+    .linkedinContainer, .githubContainer{   
+        height: 100px;
+        width: 100px;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 499px){
+    .imgContainer{
+        display: none;
+    }
+
+    .bioText{
+        border: none;
+        width: 70%;
+    }
+
+    .bioContainer{
+        justify-content: center;
+        margin-left: 55px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 699px){
+    #boxContainer{
+        width: 250px;
+        height: 250px;
+    }
+
+    .content{
+        width: 190px;
+        height: 190px;
+    }
+}
+
+@media(min-width: 700px) and (max-width: 1000px){
+  
+    #boxContainer{
+        width: 300px;
+        height: 300px;
+    }
+
+    .content{
+        width: 240px;
+        height: 240px;
+    }
+}
+
+/* PAGE 3 */
+
+@media(max-width: 1100px){
+    /* .gifContainer{
+        width:80%;
+        height:60%;
+    } */
+}
+
+@media(max-width:850px){
+    .projectDescriptionContainer > span{
+        font-size: 11px;
+    }
+    .gifContainer{
+        width:75%;
+        height:90%;
+    }
+}
+
+@media(max-width:699px){
+    .projectInfo{
+        width: 30%;
+    }
+
+    .projectHeader{
+        width: 30%;
+    }
+}
+
+@media(max-width:499px){
+    .projectHeader{
+        /* background-color: blue; */
+        height: 20%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonContainerp3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60%;
+        width: 100%;
+    }
+
+    .project1, .project2{
+        width: 140px;
+        height: 50px;
+        margin: 10px;
+    }
+
+    #thirdPageTitle{
+        /* display: none; */
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+
+    .projectInfo{
+        order: 2;
+        margin-bottom: 800px;
+        height: 50%;
+        width: 100%;
+        
+    }
+
+    .projectList{
+        display: flex;
+        justify-content: center;
+        order: 1;
+        width: 100%;
+        height: 50%;
+    }
+
+    .projectContent{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .gifContainer{
+        height: 100%;
+    }
+
+    .descHeader{
+        text-align: center;
+    }
+
+    .projectDescriptionContainer{
+        height: 100%;
+        margin-top: 70px;
+        
+    }
+
+    .projectDescriptionContainer > span{
+        font-size: 16px;
+    }
+
+
+}

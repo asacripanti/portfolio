@@ -138,13 +138,15 @@ h3{
 .contact_form{
     display: flex;
     flex-direction: column;
+    width: 340px;
+    align-items: center;
 }
 
 .contact_form-name, .contact_form-email, .contact_form-message{
     background-color: transparent;
     border: 1px solid lightslategray;
-    width: 519px;
-    justify-content: center;
+    width: 100%
+    /* justify-content: center; */
 }
 
 .contact_form-name{
@@ -286,7 +288,7 @@ h3{
     }
 }
 
-@media(max-width: 1070px){
+/* @media(max-width: 1070px){
     .contact_form-name, .contact_form-email, .contact_form-message{
         width: 400px;
     }
@@ -350,4 +352,4 @@ h3{
     }
 
 
-}
+} */
