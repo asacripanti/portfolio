@@ -13,12 +13,10 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
+
 }
 
 .projectHeader{
-    /* background-color: red; */
     height: 15%;
     width: 20%;
     display: flex;
@@ -45,7 +43,6 @@
 }
 
 .projectContent{
-    /* background-color: blue; */
     height: 70%;
     width: 100%;
     display: flex;
@@ -58,7 +55,6 @@
 }
 
 .projectInfo{
-    /* background-color: green; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,8 +74,6 @@
     width: 80%;
     height: 100%;
     margin-bottom: 50px;
-    
-    /* background-color: pink; */
 }
 
 
@@ -96,7 +90,6 @@
     border-radius: 8px;
 }
 
-/* styles.css */
 .gifOne.active {
     transform: translateX(0);
     opacity: 1;
@@ -112,11 +105,8 @@
     left: 0;
     right: 0;
     top: -320px;
-    
-    /* left: 510px; */
     transition: opacity 3s;
     border-radius: 8px;
-    /* inset: 0; */
     box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7); 
 }
 
@@ -160,10 +150,8 @@
 }
 
 .projectDescription{
-    /* transform: translateX(-100%); */
     opacity: 0;
     transition: opacity 9s;
-    /* background-color: blueviolet; */
 }
 
 .projectDescription.active{
@@ -183,7 +171,6 @@
 .projectList{
     display: flex;
     justify-content: center;
-    /* background-color: yellow; */
 }
 
 .projectColumn{
@@ -198,7 +185,6 @@
     position: relative;
     width: 113px;
     height: 45px;
-    /* border: 1px solid black; */
     background-color: transparent;
     --container-offset: 100px;
     --glow-line-color: #fff;
@@ -208,21 +194,16 @@
     animation: dashOffsetAnimation 10s linear infinite;
 }
 
-/* buttons */
 .project1{
-    /* margin-bottom: 200px; */
     position: relative;
-    /* animation: dashOffsetAnimation 7s linear infinite; */
-    /* animation: glow-visibility 5000ms; */
 }
 
 /* svg */
 .glow-container{
     position: absolute;
     pointer-events: none;
-    /* inset moves svg on top of button */
     inset: calc(var(--container-offset) / -2);
-    /* outline: 3px solid blue; */
+
     width: calc(100% + var(--container-offset));
     height: calc(100% + var(--container-offset));
     opacity: 0;
@@ -236,7 +217,6 @@
     height: calc(100% - var(--container-offset));;
     x: calc(var(--container-offset) / 2);
     y: calc(var(--container-offset) / 2);
-    /* border radius for moving borders */
     rx:1.2rem;
     fill: transparent;
     stroke: black;
@@ -269,12 +249,3 @@
     0% { stroke-dashoffset:  50000px; }
     100% { stroke-dashoffset: 0 }
 }
-
-
-/* @media(max-width: 1085px){
-    .gifContainer{
-        width: 700px;
-        height: 340px;
-    }
-}
- */

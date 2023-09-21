@@ -177,7 +177,3 @@ project2.addEventListener('click', function(){
 form.addEventListener('submit', function(e){
     e.preventDefault();
 })
-
-// function addGlows(button){
-//     button.classList.add('glow')
-// }

@@ -17,13 +17,9 @@ html, body{
         #d65db1,
         #ff6f91,
         #FF7073
-        /* #ff9671, */
-        /* #ffc75f, */
-        /* #f9f871 */
     );
     background-size: 400%;
     background-repeat: no-repeat;
-    /* z-index: -1; */
     animation: bg-animation 7s infinite alternate;
     display: flex;
     flex-direction: column;
@@ -61,7 +57,6 @@ footer{
     animation-duration: calc(650s / var(--i));
     transition: background-color 0.5s ease;
     opacity: 1;
-    /* z-index: -1; */
 }
 
 @keyframes bg-animation{
@@ -82,9 +77,6 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    /* width: 1000px; */
-    /* width: 100%; */
-    /* background-color: purple; */
 }
 
 #thirdPage{
@@ -98,8 +90,6 @@ footer{
 
 .navbar{
     z-index: 1;
-    /* position: sticky;
-    top: 0px; */
 }
 
 .navbar-nav{
@@ -142,10 +132,6 @@ footer{
     margin: 0;
     padding: 0;
     
-}
-
-.colOneButtonContainer{
-    /* align-self: flex-end; */
 }
 
 .colOneButtonContainer > button{
@@ -217,7 +203,6 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transition: transform .5s ease; */
 }
 
 .grid-even-columns .flow:hover img{
@@ -256,205 +241,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 1080px; */
     width: 100%;
     height: 350px;
     box-sizing: border-box;
-    /* margin-bottom: 40px; */
 }
 
-
-/* 
-@media (min-height: 660px) and (max-height:769px){
-    #firstPage{
-        height: 660px;
-    }
-
-    .techStack{
-     height: 280px;
-    }
-
-    .techStack > div{
-        height: 60%;
-    }
-
-    .grid-even-columns .flow img{
-        width: 90px;
-        height: 90px;    
-    }
- }
-
- @media (min-height: 770px) and (max-height: 884px){
-    .bubbles{
-        margin-bottom: 150px;
-    }
- }
-
- @media(min-height: 885px) and (max-height:1000px){
-    .bubbles{
-        margin-bottom: 90px;
-    }
- }
-
- @media(min-height: 1170px){
-    #firstPage{
-        height: 1100px;
-    }
- }
-
-
-
-@media(max-width:499px){
-    .grid-even-columns{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    #colOneHeaderName{
-        font-size: 55px;
-    }
-    
-    .colOneBodyText{
-        font-size: 16px;
-    }
-    
-    .techStack > div{
-        width: 40%;
-    }
-
-    .grid-even-columns .flow img{
-        width: 75px;
-        height: 75px;    
-    }
-
-    .grid-even-columns .flow:hover img{
-        transform: translate(90px);
-    }
-
-    .logoText{
-        font-size: 16px;
-    }
-
-    .col-one{
-        grid-template-rows: 270px 80px 70px;
-    }
-
-    .techStack{
-        height: 450px;
-    }
-
-    footer{
-        height: 20px;
-    }
-}
-
-
-@media(min-width:500px) and (max-width: 699px){
-    #colOneHeaderName{
-        font-size: 75px;
-    }
-    
-    .colOneBodyText{
-        font-size: 18px;
-    }
-    
-    .techStack > div{
-        width: 40%;
-    }
-
-    .grid-even-columns .flow img{
-        width: 55px;
-        height: 55px;    
-    }
-
-    .grid-even-columns .flow:hover img{
-        transform: translate(58px);
-    }
-
-    .logoText{
-        font-size: 10px;
-    }
-}
-
-
-@media(min-width: 700px) and (max-width: 1000px){
-    .techStack > div{
-        width: 70%;
-    }
-
-    .grid-even-columns .flow img{
-        width: 80px;
-        height: 80px;    
-    }
-
-    .grid-even-columns .flow:hover img{
-        transform: translate(100px);
-    }
-
-
-}
-
-
-
- @media(min-height:600px) and (max-height: 899px){
-    @keyframes animate-bubbles {
-        0%
-        {
-            transform: translateY(0vh) scale(0);
-        }
-        80%
-        {
-            
-        }
-        90%
-        {
-           
-        }
-        95%
-        {
-            background-color: white;
-            box-shadow: 0 0 0 10px white,0 0 50px white,
-            0 0 100px white;
-            opacity: .7; 
-        }
-        100%
-        {
-            transform:  translateY(-400px) scale(.4);
-            opacity: 0;
-        }
-    }
-}
- 
-
- @media(min-height:900px){
-    @keyframes animate-bubbles {
-        0%
-        {
-            transform: translateY(0vh) scale(0);
-        }
-        80%
-        {
-            
-        }
-        90%
-        {
-           
-        }
-        95%
-        {
-            background-color: white;
-            box-shadow: 0 0 0 10px white,0 0 50px white,
-            0 0 100px white;
-            opacity: .7; 
-        }
-        100%
-        {
-            transform:  translateY(-600px) scale(.4);
-            opacity: 0;
-        }
-    }
-} */
-
-
-
-/* adjust width and height */
 
