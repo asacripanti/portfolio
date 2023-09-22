@@ -22,12 +22,14 @@ const projDescContainer = document.querySelector('.projectDescriptionContainer')
 const projDescContainerTwo = document.querySelector('.projectDescriptionContainerTwo')
 const descHeader = document.querySelector('.descHeader');
 const form = document.querySelector('.contact_form');
+const serverBtn = document.querySelector('.serverBtn');
+const codeBtn = document.querySelector('.codeBtn');
 
 
 githubLogo.addEventListener('click', function(){
     const url = 'https://github.com/asacripanti'
-
-    window.location.href = url;
+    window.open(url);
+    // window.location.href = url;
 })
 
 linkedInLogo.addEventListener('click', function(){
@@ -35,6 +37,20 @@ linkedInLogo.addEventListener('click', function(){
 
     window.open(url);
     // window.location.href = url;
+})
+
+serverBtn.addEventListener('click', function(){
+    const url = 'https://asacripanti.github.io/MTGdeckbuilder/'
+
+    window.open(url);
+    // window.location.href = url;
+})
+
+codeBtn.addEventListener('click', function(){
+    const url = 'https://github.com/asacripanti/MTGdeckbuilder'
+
+    window.open(url);
+
 })
 
 // navigate to about page

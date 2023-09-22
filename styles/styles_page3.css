@@ -198,6 +198,44 @@
     position: relative;
 }
 
+.buttonLinksContainer{
+    height: 50px;
+}
+
+.codeBtn, .serverBtn{
+    width: 70px;
+    text-align: left;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    border-width: 1.5px;
+    font-family: 'Abel', 'monospace';
+    border: none;
+    opacity: .5;   
+}
+
+.codeBtn:hover, .serverBtn:hover{
+    /* color: red; */
+    border: 1px solid pink;
+    opacity: 1;
+}
+
+.serverBtnImg{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 4px;
+    left: 44px;
+}
+
+.codeBtnImg{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -8px;
+    left: 32px;
+}
+
 /* svg */
 .glow-container{
     position: absolute;
