@@ -39,15 +39,14 @@ linkedInLogo.addEventListener('click', function(){
     // window.location.href = url;
 })
 
-serverBtn.addEventListener('click', function(){
-    const url = 'https://asacripanti.github.io/MTGdeckbuilder/'
+// serverBtn.addEventListener('click', function(){
+//     const url = 'https://asacripanti.github.io/MTGdeckbuilder/'
 
-    window.open(url);
-    // window.location.href = url;
-})
+//     window.open(url);
+// })
 
 codeBtn.addEventListener('click', function(){
-    const url = 'https://github.com/asacripanti/MTGdeckbuilder'
+    const url = 'https://github.com/asacripanti/MTGdeckbuilder/tree/capstone'
 
     window.open(url);
 
@@ -176,19 +175,19 @@ project1.addEventListener('click', function(){
     projDescContainerTwo.classList.remove('active');
 })
 
-project2.addEventListener('click', function(){
-    blurTwo.classList.add('glow-blur');
-    lineTwo.classList.add('glow-line');
-    blur.classList.remove('glow-blur')
-    line.classList.remove('glow-line');
+// project2.addEventListener('click', function(){
+//     blurTwo.classList.add('glow-blur');
+//     lineTwo.classList.add('glow-line');
+//     blur.classList.remove('glow-blur')
+//     line.classList.remove('glow-line');
 
-    gifOne.classList.remove('active')
-    gifTwo.classList.add('active');
+//     gifOne.classList.remove('active')
+//     gifTwo.classList.add('active');
 
-    projDescContainerTwo.classList.add('active');
-    projDescContainer.classList.remove('active');
+//     projDescContainerTwo.classList.add('active');
+//     projDescContainer.classList.remove('active');
 
-})
+// })
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
